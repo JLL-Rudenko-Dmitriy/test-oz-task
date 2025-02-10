@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Abstractions\Abstractions.csproj" />
+      <ProjectReference Include="..\Dto\Dto.csproj" />
+      <ProjectReference Include="..\..\Core\Models\Models.csproj" />
+      <ProjectReference Include="..\Plugins\Plugins.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Npgsql" Version="9.0.2" />
+      <PackageReference Include="NRedisStack" Version="0.13.2" />
+    </ItemGroup>
+
+</Project>
