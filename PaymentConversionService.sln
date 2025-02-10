@@ -1,54 +1,58 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1E5982FC-EC43-486A-AF6A-67044CE635FB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core\Core", "{1E5982FC-EC43-486A-AF6A-67044CE635FB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3E302CE7-9543-4A70-A15D-379973CB5832}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure\Infrastructure", "{3E302CE7-9543-4A70-A15D-379973CB5832}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Endpoints", "Endpoints", "{E19EB052-DFF3-4C3B-823A-C170B4095B27}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Endpoints", "Endpoints\Endpoints", "{E19EB052-DFF3-4C3B-823A-C170B4095B27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{CD678887-EAFE-47FC-9F1B-F9F1D67A232C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Infrastructure\Repositories\Repositories.csproj", "{CD678887-EAFE-47FC-9F1B-F9F1D67A232C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3BF206B9-2AB7-43DA-8AF4-8559F10C571C} = {3BF206B9-2AB7-43DA-8AF4-8559F10C571C}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfrastructureExtensions", "InfrastructureExtensions\InfrastructureExtensions.csproj", "{CED53FBC-7FAA-4C49-8134-E72AA9AC111B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfrastructureExtensions", "Infrastructure\InfrastructureExtensions\InfrastructureExtensions.csproj", "{CED53FBC-7FAA-4C49-8134-E72AA9AC111B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrations", "Migrations\Migrations.csproj", "{4B895340-61CA-4882-930E-3961D4E1C20C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migrations", "Infrastructure\Migrations\Migrations.csproj", "{4B895340-61CA-4882-930E-3961D4E1C20C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F06950BD-41ED-4D40-94AF-2C30003F4894}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests\Tests", "{F06950BD-41ED-4D40-94AF-2C30003F4894}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversionServiceTests", "ConversionServiceTests\ConversionServiceTests.csproj", "{59ED91DE-5ECD-4B99-BE13-E0472A0C350E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversionServiceTests", "Tests\ConversionServiceTests\ConversionServiceTests.csproj", "{59ED91DE-5ECD-4B99-BE13-E0472A0C350E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{2471B419-FA4C-45AC-917E-295D2B07E3BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Core\Contracts\Contracts.csproj", "{2471B419-FA4C-45AC-917E-295D2B07E3BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainExtensions", "DomainExtensions\DomainExtensions.csproj", "{47FF966E-7459-484C-B703-E6A72ED9721F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainExtensions", "Core\DomainExtensions\DomainExtensions.csproj", "{47FF966E-7459-484C-B703-E6A72ED9721F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions", "Abstractions\Abstractions.csproj", "{3BF206B9-2AB7-43DA-8AF4-8559F10C571C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions", "Core\Abstractions\Abstractions.csproj", "{3BF206B9-2AB7-43DA-8AF4-8559F10C571C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins", "Plugins\Plugins.csproj", "{E4EFB842-C75B-46F8-ABC4-71B0FE5079EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins", "Infrastructure\Plugins\Plugins.csproj", "{E4EFB842-C75B-46F8-ABC4-71B0FE5079EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueObjects", "ValueObjects\ValueObjects.csproj", "{BDD24601-58D0-4AE4-A5A3-DEE873197433}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueObjects", "Core\ValueObjects\ValueObjects.csproj", "{BDD24601-58D0-4AE4-A5A3-DEE873197433}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Enums\Enums.csproj", "{4D3B185C-62B9-4C34-8D85-8B22BDC85237}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Core\Enums\Enums.csproj", "{4D3B185C-62B9-4C34-8D85-8B22BDC85237}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{5C644D01-10B2-4A65-8C7B-5CBC540B3296}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Core\Models\Models.csproj", "{5C644D01-10B2-4A65-8C7B-5CBC540B3296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{293A4CB7-A86B-452C-995B-C5862265BD25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Core\Services\Services.csproj", "{293A4CB7-A86B-452C-995B-C5862265BD25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dto", "Dto\Dto.csproj", "{34401E81-0CE3-49B3-B8D2-8E8469E6FB3D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dto", "Infrastructure\Dto\Dto.csproj", "{34401E81-0CE3-49B3-B8D2-8E8469E6FB3D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GrpcServices", "GrpcServices", "{7627C6CF-9DDC-4803-A01F-FD9212FCF708}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GrpcServices", "Endpoints\GrpcServices", "{7627C6CF-9DDC-4803-A01F-FD9212FCF708}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService", "ReportService\ReportService.csproj", "{042104A7-D639-4D3B-BE54-4B0B0CD9CBA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportService", "Endpoints\GrpcServices\ReportService\ReportService.csproj", "{042104A7-D639-4D3B-BE54-4B0B0CD9CBA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FCCEA2CE-C645-4087-A490-74E0557E02F1}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaWorkerService", "KafkaWorkerService\KafkaWorkerService.csproj", "{B1351671-0340-4424-B3A6-4F4E7460F097}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaWorkerService", "Infrastructure\KafkaWorkerService\KafkaWorkerService.csproj", "{B1351671-0340-4424-B3A6-4F4E7460F097}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportQueryService", "ReportQueryService\ReportQueryService.csproj", "{42AA534C-9D0D-4A03-BAF0-A3DA9D7DFF9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportQueryService", "Endpoints\GrpcServices\ReportQueryService\ReportQueryService.csproj", "{42AA534C-9D0D-4A03-BAF0-A3DA9D7DFF9C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{47FF966E-7459-484C-B703-E6A72ED9721F} = {47FF966E-7459-484C-B703-E6A72ED9721F}
+		{CED53FBC-7FAA-4C49-8134-E72AA9AC111B} = {CED53FBC-7FAA-4C49-8134-E72AA9AC111B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

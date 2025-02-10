@@ -18,21 +18,100 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b190e7cf-6bd0-45d5-895b-1cb043e8c016" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Abstractions/Entities/IReport.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Abstractions/Repositories/ICachingReportRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Abstractions/Repositories/IReportQueryRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contracts/IReportQueryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Contracts/IReportService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConversionServiceTests/ConversionServiceTests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DomainExtensions/DomainExtension.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DomainExtensions/DomainExtensions.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InfrastructureExtensions/InfrastructureExtensions.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/Reports/Report.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PaymentConversionService.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/ReportQueryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ValueObjects/ConversionRatio.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ValueObjects/PaymentsCount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PaymentConvertionService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaymentConvertionService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/Abstractions.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/Builders/ReportBuilders/IReportBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/Builders/ReportQueryBuilders/IReportQueryBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/Entities/IReport.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/Entities/IReportQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/Repositories/ICachingReportQueryRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/Repositories/ICachingReportRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/Repositories/IReportQueryRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/Repositories/IReportRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/ResultTypes/ReportDbQueryResult.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/ResultTypes/ReportQueryResult.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Abstractions/ResultTypes/ReportResult.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/Contracts.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/IReportQueryService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts/IReportService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConversionServiceTests/ConversionServiceTests.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConversionServiceTests/UnitTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DomainExtensions/DomainExtension.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DomainExtensions/DomainExtensions.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/ConversionReportDataDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/Dto.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/RequestsDto/CreateReportRequestDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/RequestsDto/GetReportDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/RequestsDto/ReportRequestDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/ResponsesDto/ReportResponseDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/ResponsesDto/ReportStatusResponseDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enums/Enums.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enums/ProcessStatuses.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfrastructureExtensions/DbExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/InfrastructureExtensions/InfrastructureExtensions.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/ConsumerObserver/IObservable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/ConsumerObserver/IObserver.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Consumers/BackgroundServices/BatchKafkaBackgroundService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Consumers/BackgroundServices/FastKafkaBackgroundService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Consumers/BackgroundServices/KafkaBackgroundService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Consumers/Builders/Abstractions/IConsumerFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Consumers/Builders/Models/BaseConsumerFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Consumers/Decorator/BatchConsumer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Consumers/Decorator/FastConsumer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Consumers/Decorator/IConsumerDecorator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Consumers/PureFabrication/BatchSize.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/KafkaWorkerService.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Protos/report_generator.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/Protos/report_query.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KafkaWorkerService/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/Migrations.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/NpgsqlMigrations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Models.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ReportQueries/Builders/ReportQueryBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ReportQueries/ReportQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Reports/Builders/ReportBuilder.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Reports/Report.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PaymentConversionService.sln" beforeDir="false" afterPath="$PROJECT_DIR$/PaymentConversionService.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/DtoMapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Plugins.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/RedisMapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportQueryService/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportQueryService/Interceptors/Validation/GetReportValidationInterceptor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportQueryService/Interceptors/Validation/NewReportQueryValidationInterceptor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportQueryService/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportQueryService/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportQueryService/Protos/report_query.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportQueryService/ReportQueryService.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportQueryService/Services/ReportQueryService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportQueryService/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportQueryService/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportService/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportService/Interceptors/Validation/GetReportValidationInterceptor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportService/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportService/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportService/Protos/report_generator.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportService/ReportService.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportService/Services/ReportGeneratorService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportService/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportService/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/ReportQueryRepositories/NpgsqlReportQueryRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/ReportQueryRepositories/RedisReportQueryRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/ReportRepositories/NpgsqlReportRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/ReportRepositories/RedisReportRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/Repositories.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ReportQueryService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ReportService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Services.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ValueObjects/ConversionRatio.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ValueObjects/PaymentsCount.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ValueObjects/Period.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ValueObjects/UserViews.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ValueObjects/ValueObjects.csproj" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,35 +124,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JLL-Rudenko-Dmitriy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JLL-Rudenko-Dmitriy/test-oz-task.git&quot;,
+    &quot;accountId&quot;: &quot;813dc117-045c-4b0c-951f-141772cd2206&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5054e87bcad2448d964f40bdc030c46916928/d4/39b17daf/CallSiteValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7d73c1c2161408c96e77c81d00435b26ca00/2b/3b95c911/ConsumerConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7d73c1c2161408c96e77c81d00435b26ca00/72/630344ea/Consumer`2.cs" root0="FORCE_HIGHLIGHTING" />
@@ -98,11 +161,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1e07ef3dd1e3bf4d861acf9f98ef09dd881acb623b7d62e7a8b44a5ba393d9/ReportQuery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ec564b72a1a6ea3041e37d7c917eecb25f8931a0a7902df47a4cb8a3bee14a1a/NpgsqlDataSource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/fb367341658aaedd7de424d4c9189db33c4387e268dcc4011918569442ab12/AsyncTaskMethodBuilderT.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ConversionServiceTests/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GrpcService1/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/KafkaWorkerService/Consumers/Builders/Abstractions/IConsumerFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/KafkaWorkerService/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ReportService/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Contracts/IReportQueryService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Services/ReportQueryService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Infrastructure/Repositories/ReportQueryRepositories/NpgsqlReportQueryRepository.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -110,7 +171,7 @@
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="Toolset" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -715,8 +776,17 @@
       <workItem from="1739125489170" duration="3996000" />
       <workItem from="1739133210177" duration="30221000" />
       <workItem from="1739166457212" duration="38140000" />
-      <workItem from="1739207162835" duration="636000" />
+      <workItem from="1739207162835" duration="2471000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1739207870445</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739207870446</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -738,6 +808,8 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
