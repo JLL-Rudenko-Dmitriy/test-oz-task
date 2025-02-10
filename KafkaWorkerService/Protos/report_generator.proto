@@ -1,0 +1,28 @@
+﻿syntax = "proto3";
+
+package ReportGenerator;
+
+service ReportGeneratorService {
+  rpc GenerateReports (CreateReportsRequest) returns (CreateReportsResponse);
+}
+
+message ReportRequest {
+  string date_start = 1;
+  string date_end = 2;
+  string product_id = 3;
+  string case_id = 4;
+}
+
+message FailReportCreationData {
+  string message = 1;
+  string case_id = 2;
+}
+
+message CreateReportsRequest {
+  repeated ReportRequest reports = 1;
+}
+
+message CreateReportsResponse {
+  uint64 successful_count = 1;
+  repeated FailReportCreationData failed_reports = 2;
+}

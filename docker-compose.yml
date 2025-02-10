@@ -1,0 +1,115 @@
+﻿version: "3.8"
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgrs
+      POSTGRES_PASSWORD: postgrs
+      POSTGRES_DB: postgrs
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: redis_cache
+    restart: always
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - 2181:2181
+  
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - 9092:9092
+      - 29092:29092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      
+  kafka-work-service:
+    build:
+      context: .
+      dockerfile: KafkaWorkerService/Dockerfile
+    container_name: kafka-work-service
+    environment:
+      KAFKA_CONNECTION_HOST_STRING: kafka:29092
+      KAFKA_TOPIC: report-requests
+      KAFKA_TOPICS_FAST_CONSUMER_GROUP: fast-consumer-group
+      KAFKA_TOPICS_BATCH_CONSUMER_GROUP: batch-consumer-group
+      GRPC_SERVICES_REPORT_GENERATOR: http://grpc-report-generator-service:5039
+      GRPC_SERVICES_REPORT_QUERY: http://grpc-report-query-service:5038
+      MESSAGE_LIMIT_PER_CONSUMER: 1 
+      BATCH_CONSUMER_HOURS_INTERVAL: 12
+      ASPNETCORE_ENVIRONMENT: Production
+      KAFKA_RECEIVE_MESSAGE_MAX_BYTES: 1048576000
+    ports:
+      - "5010:5010"
+    depends_on:
+      - kafka
+      - grpc-report-generator-service
+      - grpc-report-query-service
+    networks:
+      - default
+
+  grpc-report-generator-service:
+    build:
+      context: .
+      dockerfile: ReportService/Dockerfile
+    container_name: grpc-report-generator-service
+    environment:
+      PGSQL_CONNECTION_STRING: Host=postgres_db;Username=postgrs;Password=postgrs;Port=5432;Database=postgrs;
+      REDIS_CONNECTION_STRING: redis:6379
+      REDIS_SORTEDSET_KEY_NAME: report_queries
+      REDIS_HASH_KEY: report_query
+      ASPNETCORE_ENVIRONMENT: Production
+    ports:
+      - "5039:5039"
+    depends_on:
+      - redis
+      - postgres
+      
+  grpc-report-query-service:
+    build:
+      context: .
+      dockerfile: ReportQueryService/Dockerfile
+    container_name: grpc-report-query-service
+    environment:
+      PGSQL_CONNECTION_STRING: Host=postgres_db;Username=postgrs;Password=postgrs;Port=5432;Database=postgrs;
+      REDIS_CONNECTION_STRING: redis:6379
+      REDIS_SORTEDSET_KEY_NAME: report_queries
+      REDIS_HASH_KEY: report_query
+      ASPNETCORE_ENVIRONMENT: Production
+    ports:
+      - "5038:5038"
+    depends_on:
+        - redis
+        - postgres
+    
+volumes:
+  postgres_data:
+  redis_data:
+  kafka_data:
