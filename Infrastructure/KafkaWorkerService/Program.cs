@@ -62,10 +62,10 @@ if (builder.Environment.IsProduction())
     kafkaConnectionString = builder.Configuration["KAFKA_CONNECTION_HOST_STRING"]
                             ?? throw new InvalidOperationException("Can not set connection string");
 
-    fastConsumerGroup = builder.Configuration["KAFKA_TOPICS_FAST_CONSUMER_TOPIC"]
+    fastConsumerGroup = builder.Configuration["KAFKA_TOPICS_FAST_CONSUMER_GROUP"]
                         ?? throw new InvalidOperationException("Can not set connection fast consumer topic string");
 
-    batchConsumerGroup = builder.Configuration["KAFKA_TOPICS_BATCH_CONSUMER_TOPIC"]
+    batchConsumerGroup = builder.Configuration["KAFKA_TOPICS_BATCH_CONSUMER_GROUP"]
                          ?? throw new InvalidOperationException("Can not set connection batch consumer topic string");
 
     batchTimeInterval = uint.Parse(builder.Configuration["BATCH_CONSUMER_HOURS_INTERVAL"]

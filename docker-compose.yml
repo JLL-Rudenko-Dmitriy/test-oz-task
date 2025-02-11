@@ -23,7 +23,7 @@ services:
       - "6379:6379"
     volumes:
       - redis_data:/data
-      
+
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     container_name: zookeeper
@@ -62,7 +62,7 @@ services:
       KAFKA_TOPICS_BATCH_CONSUMER_GROUP: batch-consumer-group
       GRPC_SERVICES_REPORT_GENERATOR: http://grpc-report-generator-service:5039
       GRPC_SERVICES_REPORT_QUERY: http://grpc-report-query-service:5038
-      MESSAGE_LIMIT_PER_CONSUMER: 1 
+      MESSAGE_LIMIT_PER_CONSUMER: 512
       BATCH_CONSUMER_HOURS_INTERVAL: 12
       ASPNETCORE_ENVIRONMENT: Production
       KAFKA_RECEIVE_MESSAGE_MAX_BYTES: 1048576000

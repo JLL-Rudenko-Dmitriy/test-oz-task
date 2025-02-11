@@ -13,22 +13,21 @@ ENV APP_NAME=ReportQueryService \
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ReportQueryService/ReportQueryService.csproj", "ReportQueryService/"]
-COPY ["DomainExtensions/DomainExtensions.csproj", "DomainExtensions/"]
-COPY ["Dto/Dto.csproj", "Dto/"]
-COPY ["Models/Models.csproj", "Models/"]
-COPY ["Abstractions/Abstractions.csproj", "Abstractions/"]
-COPY ["ValueObjects/ValueObjects.csproj", "ValueObjects/"]
-COPY ["Enums/Enums.csproj", "Enums/"]
-COPY ["Contracts/Contracts.csproj", "Contracts/"]
-COPY ["Services/Services.csproj", "Services/"]
-COPY ["Plugins/Plugins.csproj", "Plugins/"]
-COPY ["InfrastructureExtensions/InfrastructureExtensions.csproj", "InfrastructureExtensions/"]
-COPY ["Repositories/Repositories.csproj", "Repositories/"]
-COPY ["ReportService/ReportService.csproj", "ReportService/"]
-RUN dotnet restore "ReportQueryService/ReportQueryService.csproj"
+COPY ["Endpoints/GrpcServices/ReportQueryService/ReportQueryService.csproj", "Endpoints/GrpcServices/ReportQueryService/"]
+COPY ["Core/ValueObjects/ValueObjects.csproj", "Core/ValueObjects/"]
+COPY ["Core/Services/Services.csproj", "Core/Services/"]
+COPY ["Core/Abstractions/Abstractions.csproj", "Core/Abstractions/"]
+COPY ["Infrastructure/Dto/Dto.csproj", "Infrastructure/Dto/"]
+COPY ["Core/Enums/Enums.csproj", "Core/Enums/"]
+COPY ["Core/Contracts/Contracts.csproj", "Core/Contracts/"]
+COPY ["Core/Models/Models.csproj", "Core/Models/"]
+COPY ["Infrastructure/Plugins/Plugins.csproj", "Infrastructure/Plugins/"]
+COPY ["Infrastructure/Repositories/Repositories.csproj", "Infrastructure/Repositories/"]
+COPY ["Infrastructure/InfrastructureExtensions/InfrastructureExtensions.csproj", "Infrastructure/InfrastructureExtensions/"]
+COPY ["Core/DomainExtensions/DomainExtensions.csproj", "Core/DomainExtensions/"]
+RUN dotnet restore "Endpoints/GrpcServices/ReportQueryService/ReportQueryService.csproj"
 COPY . .
-WORKDIR "/src/ReportQueryService"
+WORKDIR "/src/Endpoints/GrpcServices/ReportQueryService"
 RUN dotnet build "ReportQueryService.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
