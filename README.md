@@ -76,5 +76,6 @@ _(Отчет не готов)_
 ```
 
 # Диаграмма таблиц из БД
-![postgrs@localhost](https://github.com/user-attachments/assets/e88a5d55-8825-4c7f-b393-03b8ecd431ef)
+![postgrs@localhost](https://github.com/user-attachments/assets/511b0971-de8d-4739-b0e8-37a6cfd3b985)
+
 
