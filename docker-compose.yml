@@ -53,7 +53,7 @@ services:
   kafka-work-service:
     build:
       context: .
-      dockerfile: KafkaWorkerService/Dockerfile
+      dockerfile: Infrastructure/KafkaWorkerService/Dockerfile
     container_name: kafka-work-service
     environment:
       KAFKA_CONNECTION_HOST_STRING: kafka:29092
@@ -78,7 +78,7 @@ services:
   grpc-report-generator-service:
     build:
       context: .
-      dockerfile: ReportService/Dockerfile
+      dockerfile: Endpoints/GrpcServices/ReportService/Dockerfile
     container_name: grpc-report-generator-service
     environment:
       PGSQL_CONNECTION_STRING: Host=postgres_db;Username=postgrs;Password=postgrs;Port=5432;Database=postgrs;
@@ -95,7 +95,7 @@ services:
   grpc-report-query-service:
     build:
       context: .
-      dockerfile: ReportQueryService/Dockerfile
+      dockerfile: Endpoints/GrpcServices/ReportQueryService/Dockerfile
     container_name: grpc-report-query-service
     environment:
       PGSQL_CONNECTION_STRING: Host=postgres_db;Username=postgrs;Password=postgrs;Port=5432;Database=postgrs;
