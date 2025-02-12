@@ -74,3 +74,7 @@ _(Отчет не готов)_
   "result": "status"
 }
 ```
+
+# Диаграмма таблиц из БД
+![postgrs@localhost](https://github.com/user-attachments/assets/e88a5d55-8825-4c7f-b393-03b8ecd431ef)
+
